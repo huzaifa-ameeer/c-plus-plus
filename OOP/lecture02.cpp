@@ -1,4 +1,4 @@
-//contructor and destructor
+// contructor and destructor
 
 // #include<iostream>
 // using namespace std;
@@ -19,7 +19,7 @@
 // }
 
 // #include<iostream>
-// using namespace std; 
+// using namespace std;
 
 // class Customer {
 //     string name;
@@ -37,7 +37,6 @@
 //     return 0;
 // }
 
-
 // #include<iostream>
 // using namespace std;
 
@@ -45,7 +44,6 @@
 //     string name;
 //     int acc_num;
 //     int balance;
-
 
 //     public:
 
@@ -56,15 +54,14 @@
 //         balance= 1000;
 //     }
 
-    // parameterized constructor with 3 arguments
-    // Customer(string name, int acc_num, int balance){
-    //     this-> name= name;
-    //     this-> acc_num= acc_num;
-    //     this-> balance= balance;
-    // }
+// parameterized constructor with 3 arguments
+// Customer(string name, int acc_num, int balance){
+//     this-> name= name;
+//     this-> acc_num= acc_num;
+//     this-> balance= balance;
+// }
 
-
-    //inline constructor
+// inline constructor
 //     inline Customer(string a, int b, int c): name(a), acc_num(b), balance(c){
 
 //     }
@@ -90,8 +87,7 @@
 //     A3.display();
 // }
 
-
-//copy contructor
+// copy contructor
 
 // #include<iostream>
 // using namespace std;
@@ -119,30 +115,68 @@
 //     C1.display();
 //     Customer C2(C1);
 //     C2.display();
-    
+
 // }
 
+// destructor
 
-//destructor
+// #include<iostream>
+// using namespace std;
 
-#include<iostream>
+// class Customer{
+// private:
+//     string name;
+//     int* data;
+// public:
+//     Customer(string name, int d){
+//         this->name= name;
+//         data= new int;
+//         *data = d;
+//     }
+//     ~Customer(){
+
+//     }
+// };
+
+// int main (){
+//     Customer c("Huzaifa", 10);
+// }
+
+#include <iostream>
 using namespace std;
 
-class Customer{
+class Customer
+{
+
 private:
     string name;
-    int* data;
-public:
-    Customer(string name, int d){
-        this->name= name;
-        data= new int;
-        *data = d;
-    }    
-    ~Customer(){
+    int *data;
 
+public:
+
+    Customer(){
+        name= "4";
+        cout << "constructor: " << name << endl;
+    }
+
+    Customer(string name)
+    {
+        this->name = name;
+        cout << "constructor: " << name << endl;
+    }
+    ~Customer()
+    {
+        cout << "destructor: " << name << endl;
     }
 };
 
-int main (){
-    Customer c("Huzaifa", 10);
+int main()
+{
+    Customer c1("1");
+    Customer c2("2");
+    Customer c3("3");
+    Customer *c4 = new Customer;
+    delete c4;
+
+    return 0;
 }
