@@ -1,41 +1,41 @@
 //contructor and destructor
 
-#include<iostream>
-using namespace std;
-
-class Student {
-    public:
-    string name;
-    int age;
-
-    Student(){
-        cout<<"Constructor is called";
-    }
-};
-
-// int main (){
-//     Student S1;
-//     return 0;
-// }
-
 // #include<iostream>
-// using namespace std; 
+// using namespace std;
 
-// class Customer {
-//     string name;
-//     int acc_num, balance;
+// class Student {
 //     public:
-//     Customer(string name, int acc_num, int balance){
-//         this-> name= name;
-//         this-> acc_num= acc_num;
-//         this-> balance= balance;
+//     string name;
+//     int age;
+
+//     Student(){
+//         cout<<"Constructor is called";
 //     }
 // };
 
-// int main (){
-//     Customer c1("Huzaifa", 123, 5000);
-//     return 0;
-// }
+int main (){
+    Student S1;
+    return 0;
+}
+
+#include<iostream>
+using namespace std; 
+
+class Customer {
+    string name;
+    int acc_num, balance;
+    public:
+    Customer(string name, int acc_num, int balance){
+        this-> name= name;
+        this-> acc_num= acc_num;
+        this-> balance= balance;
+    }
+};
+
+int main (){
+    Customer c1("Huzaifa", 123, 5000);
+    return 0;
+}
 
 
 // #include<iostream>
