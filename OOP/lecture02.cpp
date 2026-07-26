@@ -57,17 +57,17 @@ class Customer {
     }
 
     // parameterized constructor with 3 arguments
-    Customer(string name, int acc_num, int balance){
-        this-> name= name;
-        this-> acc_num= acc_num;
-        this-> balance= balance;
-    }
+    // Customer(string name, int acc_num, int balance){
+    //     this-> name= name;
+    //     this-> acc_num= acc_num;
+    //     this-> balance= balance;
+    // }
 
 
     //inline constructor
-    // inline Customer(string a, int b, int c): name(a), acc_num(b), balance(c){
+    inline Customer(string a, int b, int c): name(a), acc_num(b), balance(c){
 
-    // }
+    }
 
     //parameterized constructor with 2 arguments
     Customer(string name, int acc_num){
