@@ -93,31 +93,56 @@
 
 //copy contructor
 
+// #include<iostream>
+// using namespace std;
+
+// class Customer {
+//     private:
+//     string name;
+//     int balance;
+//     public:
+//     Customer(string a, int b){
+//         name = a;
+//         balance = b;
+//     }
+//     Customer(Customer &B){
+//         name = B.name;
+//         balance= B.balance;
+//     }
+//     void display(){
+//         cout<<"\nName: "<<name<<"\nBalance: "<<balance<<"\n-------------"<<endl;
+//     }
+// };
+
+// int main (){
+//     Customer C1("Huzaifa", 1234);
+//     C1.display();
+//     Customer C2(C1);
+//     C2.display();
+    
+// }
+
+
+//destructor
+
 #include<iostream>
 using namespace std;
 
-class Customer {
-    private:
+class Customer{
+private:
     string name;
-    int balance;
-    public:
-    Customer(string a, int b){
-        name = a;
-        balance = b;
-    }
-    Customer(Customer &B){
-        name = B.name;
-        balance= B.balance;
-    }
-    void display(){
-        cout<<"\nName: "<<name<<"\nBalance: "<<balance<<"\n-------------"<<endl;
+    int* data;
+public:
+    Customer(string name, int d){
+        this->name= name;
+        data= new int;
+        *data = d;
+    }    
+    ~Customer(){
+
     }
 };
 
 int main (){
-    Customer C1("Huzaifa", 1234);
-    C1.display();
-    Customer C2(C1);
-    C2.display();
-    
+    Customer c("Huzaifa", 10);
 }
