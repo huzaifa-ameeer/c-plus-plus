@@ -52,46 +52,74 @@
 
 //static member function
 
+// #include<iostream>
+// using namespace std;
+
+// class Customer {
+// private:
+//     string name;
+//     int balance;
+//     static int total_customers;
+//     static int total_balance;
+// public:
+//     Customer(string name, int balance)
+//     {
+//         this->name = name;
+//         this->balance = balance;
+//         total_customers++;
+//         total_balance+=balance;
+//     }
+//     void display(){
+//         cout<<"Name: "<<name<<endl<<"Balance: "<<balance<<"\n------------"<<endl;
+//     }
+//     static void accessStatic (){
+//         cout<<"Total Customer: "<<total_customers<<endl;
+//         cout<<"Total Balance: "<<total_balance<<"\n"<<endl;
+
+//     }
+// };
+
+// int Customer::total_customers = 0;
+// int Customer::total_balance = 0;
+
+// int main (){
+//     Customer c1("Huzaifa", 1000);
+//     Customer c2("Ghufran", 3000);
+//     Customer c3("Hassan", 2000);
+
+//     c1.display();
+//     c2.display();
+//     c3.display();
+
+//     Customer::accessStatic();
+
+//     return 0;
+// }
+
+
+//encapsulation
+
 #include<iostream>
 using namespace std;
 
-class Customer {
+class Bank {
 private:
-    string name;
     int balance;
-    static int total_customers;
-    static int total_balance;
 public:
-    Customer(string name, int balance)
-    {
-        this->name = name;
-        this->balance = balance;
-        total_customers++;
-        total_balance+=balance;
-    }
-    void display(){
-        cout<<"Name: "<<name<<endl<<"Balance: "<<balance<<"\n------------"<<endl;
-    }
-    static void accessStatic (){
-        cout<<"Total Customer: "<<total_customers<<endl;
-        cout<<"Total Balance: "<<total_balance<<"\n"<<endl;
-
+    Bank(int bal){
+        balance = bal;
+    }    
+    void deposit (){
+        if(balance>0){
+            balance += balance; 
+        }
+        else{
+            cout<<"Invalid amount";
+        }
     }
 };
 
-int Customer::total_customers = 0;
-int Customer::total_balance = 0;
-
 int main (){
-    Customer c1("Huzaifa", 1000);
-    Customer c2("Ghufran", 3000);
-    Customer c3("Hassan", 2000);
-
-    c1.display();
-    c2.display();
-    c3.display();
-
-    Customer::accessStatic();
-
-    return 0;
+    Bank b(100);
+    b.deposit();
 }
