@@ -123,3 +123,5 @@ int main (){
     Bank b(100);
     b.deposit();
 }
+
+//learned about abstraction
