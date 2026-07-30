@@ -16,6 +16,10 @@ public:
     {
         cout << "Human is working\n";
     }
+    void display()
+    {
+        cout<<name<<" "<<age<<endl;
+    }
 };
 
 class Student : public Human
@@ -31,16 +35,16 @@ public:
         this->roll_number = roll_number;
         this->fees = fees;
     }
-    void display ()
-    {
-        cout<<"Name: "<<name<<"\nage: "<<age<<"\nRoll No: "<<roll_number<<"\nFees: "<<fees<<endl;
-    }
+    // void display ()
+    // {
+    //     cout<<"Name: "<<name<<"\nage: "<<age<<"\nRoll No: "<<roll_number<<"\nFees: "<<fees<<endl;
+    // }
 };
 
 int main ()
 {
     Student s("Huzaifa", 21, 1882, 40000);
     s.display();
-    s.work();
+    // s.work();
     return 0;
 }
