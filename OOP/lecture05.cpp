@@ -278,4 +278,5 @@ int main ()
     g.girlPrint();
     g.stdPrint();
     g.femalePrint();
+
 }
